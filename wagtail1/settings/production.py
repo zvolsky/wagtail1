@@ -1,9 +1,12 @@
+import os
 from configparser import RawConfigParser
+
+from .base import *
+
+
 config = RawConfigParser()
 config['DEFAULT'] = {'ALLOWED_HOSTS': '*'}
 config.read('/etc/django/wagtail1/env.ini')
-
-from .base import *
 
 
 DEBUG = False
